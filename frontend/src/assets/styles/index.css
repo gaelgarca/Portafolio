@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #F7FAFC;
+  --surface: #FFFFFF;
+  --surface-soft: #EAF2FF;
+  --text: #0F172A;
+  --muted: #526176;
+  --line: #D8E3EF;
+  --blue: #2563EB;
+  --blue-strong: #1D4ED8;
+  --blue-soft: #EAF2FF;
+  --signal: #38BDF8;
+  --signal-soft: rgba(56, 189, 248, 0.14);
+  --focus: #2563EB;
+  --header: rgba(247, 250, 252, 0.92);
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.07);
+  --radius: 22px;
+}
+
+[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+  --bg: #090E17;
+  --surface: #0F172A;
+  --surface-soft: #1E293B;
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --line: #1E293B;
+  --blue: #3B82F6;
+  --blue-strong: #60A5FA;
+  --blue-soft: rgba(59, 130, 246, 0.15);
+  --signal: #38BDF8;
+  --signal-soft: rgba(56, 189, 248, 0.18);
+  --focus: #38BDF8;
+  --header: rgba(9, 14, 23, 0.92);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--bg);
+  color: var(--text);
+  background-image:
+    linear-gradient(rgba(82, 97, 118, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82, 97, 118, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  text-rendering: optimizeLegibility;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -63,4 +63,3 @@ Portafolio/
 3. Instalar Tailwind CSS y Axios en `frontend`.
 4. Instalar Express y CORS en `backend`.
 5. Trasladar el contenido de datos reales extraído del portafolio actual a `backend/src/data/cvData.json`.
-
