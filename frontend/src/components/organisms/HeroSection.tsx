@@ -60,27 +60,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ profile, contact }) =>
           </div>
         </div>
 
-        {/* Right Column: Portrait & Live Status Card */}
-        <div className="relative pt-4 pr-4 sm:pt-5 sm:pr-5 max-w-[420px] mx-auto w-full lg:max-w-none before:content-[''] before:absolute before:-z-10 before:top-0 before:right-0 before:w-[68%] before:h-[64%] before:border-t-2 before:border-r-2 before:border-brand-signal dark:before:border-brand-signalDark before:rounded-tr-[32px]">
-          <div className="relative aspect-[4/5] overflow-hidden border border-brand-lineLight dark:border-brand-lineDark rounded-[32px_32px_110px_32px] bg-brand-surfaceSoftLight dark:bg-brand-surfaceSoftDark shadow-portfolio-light dark:shadow-portfolio-dark">
-            <img
-              src={profile.avatarUrl}
-              alt={`Retrato profesional de ${profile.name} ${profile.paternalSurname}`}
-              width={392}
-              height={523}
-              loading="eager"
-              className="w-full h-full object-cover saturate-[0.9] contrast-[1.03] transition-transform duration-500 hover:scale-105"
-            />
-          </div>
-
-          <div className="absolute -right-2 sm:-right-4 bottom-6 sm:bottom-8 w-[min(260px,85%)] p-4 sm:p-5 rounded-2xl border border-brand-lineLight dark:border-brand-lineDark bg-brand-surfaceLight dark:bg-brand-surfaceDark shadow-portfolio-light dark:shadow-portfolio-dark">
+        {/* Right Column: Professional status card */}
+        <div className="relative max-w-[420px] mx-auto w-full lg:max-w-none">
+          <div className="relative min-h-[260px] sm:min-h-[300px] overflow-hidden flex flex-col justify-between p-7 sm:p-9 rounded-[32px_32px_110px_32px] border border-brand-lineLight dark:border-brand-lineDark bg-brand-surfaceLight dark:bg-brand-surfaceDark shadow-portfolio-light dark:shadow-portfolio-dark">
+            <div aria-hidden="true" className="absolute -right-10 -top-12 w-56 h-56 rounded-full border border-brand-signal/25 dark:border-brand-signalDark/25" />
+            <div aria-hidden="true" className="absolute -right-1 -top-3 w-40 h-40 rounded-full border border-brand-signal/20 dark:border-brand-signalDark/20" />
             <Badge variant="status">Perfil actual</Badge>
-            <strong className="block mt-1.5 text-xs sm:text-sm font-bold text-brand-textLight dark:text-brand-textDark leading-snug">
-              {profile.currentStatus}
-            </strong>
+            <div className="relative mt-14">
+              <span className="block mb-3 text-brand-mutedLight dark:text-brand-mutedDark font-mono text-xs uppercase tracking-[0.16em]">
+                Enfoque profesional
+              </span>
+              <strong className="block max-w-[340px] text-2xl sm:text-3xl font-bold leading-tight text-brand-textLight dark:text-brand-textDark">
+                {profile.currentStatus}
+              </strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
