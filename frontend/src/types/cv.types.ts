@@ -11,7 +11,6 @@ export interface ProfileInfo {
   maternalSurname: string;
   headline: string;
   bio: string;
-  avatarUrl: string;
   currentStatus: string;
   lead?: string;
 }
@@ -60,3 +59,4 @@ export interface CVData {
   language: LanguageItem;
   contact: ContactInfo;
 }
+
