@@ -14,7 +14,6 @@ export interface Profile {
   bio: string;
   currentStatus: string;
   location: string;
-  avatarUrl: string;
 }
 
 export interface Signal {
@@ -61,3 +60,4 @@ export interface CV {
   language: Language;
   contact: Contact;
 }
+
