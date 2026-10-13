@@ -7,7 +7,6 @@ export const fallbackCVData: CVData = {
     maternalSurname: 'Ramírez',
     headline: 'Álvaro Gael García Ramírez',
     bio: 'Soy estudiante de Ingeniería en Sistemas Computacionales en la Universidad Autónoma de Aguascalientes, con experiencia en soporte y actividades administrativas. Actualmente participo en el control de información, elaboración de reportes, atención al cliente y seguimiento postventa. Busco continuar desarrollándome en un entorno donde pueda fortalecer mis conocimientos tecnológicos y aportar organización, comunicación y disposición para aprender.',
-    avatarUrl: '/assets/gael-garcia.jpg',
     currentStatus: 'Formación tecnológica con experiencia práctica',
     lead: 'Estudiante de Ingeniería en Sistemas Computacionales con experiencia en soporte, gestión administrativa, control de información y atención al cliente.',
   },
